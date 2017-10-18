@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package group;
+
+option go_package = "github.com/trystanj/proto/group";
+
+import "group/nested1.proto";
+import "group/nested2.proto";
+
+message Inner {
+    oneof payload {
+        Nested1 nested1 = 1;
+        Nested2 nested2 = 2;
+    }
+}
