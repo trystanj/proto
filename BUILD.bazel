@@ -1,5 +1,10 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "gazelle")
 load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
+
+gazelle(
+    name = "gazelle",
+    prefix = "github.com/trystanj/proto",
+)
 
 proto_library(
     name = "sample_proto",
