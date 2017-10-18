@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package group;
+
+option go_package = "github.com/trystanj/proto";
+
+import "google/protobuf/timestamp.proto";
+
+message Sample {
+    google.protobuf.Timestamp update_time = 1;
+}
